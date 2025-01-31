@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This is some text.
+  </div>
+  <div id="anotherDiv">This is another div.</div>
+  <script>
+    // Correct way to select an element and modify its innerText
+    document.getElementById('myDiv').innerText = 'This text is changed.';
+    document.getElementById('anotherDiv').innerText = 'This text is also changed';
+    //Selecting all elements with a specific tag and changing them
+    let divs = document.getElementsByTagName('div');
+    for(let i = 0; i < divs.length; i++){
+        divs[i].innerText = 'This div is changed by loop';
+    }
+  </script>
+</body>
+</html>
