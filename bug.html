@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This is some text.
+  </div>
+  <script>
+    //Incorrect way to select an element that causes unexpected behavior
+    document.getElementById('myDiv').innerText = 'This text is changed.';
+    document.getElementByTagName('div').innerText = 'This will not change';
+  </script>
+</body>
+</html>
